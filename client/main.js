@@ -9,7 +9,7 @@ function render(data){
     var html = data.map(function(message,index){
         return (`
             <div class="message">
-                <strong>${message.nickname}</strong> dice:
+                <h6><strong>${message.nickname}</strong> dice:</h66>
                 <textarea id="textA" _ngcontent-c2="" class="form-control">${message.text}</textarea>
             </div>
         `);
