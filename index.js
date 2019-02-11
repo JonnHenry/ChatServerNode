@@ -1,9 +1,11 @@
-var express = require('express');
+﻿var express = require('express');
 var app = express();
 var server = require('http').Server(app);
 var io =require('socket.io')(server);
+var PORT = process.env.PORT || 8080;
 
 app.use(express.static('client'));
+
 
 
 var messages =[{
@@ -23,8 +25,9 @@ io.on('connection',function(socket){
         io.sockets.emit('messages',messages);
     });
 });
-var port =normalizePort(process.env.PORT || '6677')
-server.listen(port,function(){
-    console.log('Servidor está funcionando en '+port);
+
+
+server.listen(PORT,function(){
+	console.log('el servidor esta escuchando el puerto %s',PORT);
 });
 

@@ -4,16 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon server/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.4",
-    "socket.io": "^2.2.0"
+    "express": "*",
+    "socket.io": "*"
   },
-  "devDependencies": {
-    "nodemon": "^1.18.9"
+  "devDependencies": {},
+  "engines": {
+    "node":"v10.14.2"
   }
+
 }
