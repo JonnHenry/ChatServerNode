@@ -25,7 +25,8 @@ io.on('connection',function(socket){
     });
 });
 
-server.listen("https://fastwebservice.herokuapp.com/",function(){
-    console.log('Servidor está funcionando en https://fastwebservice.herokuapp.com/');
+var port =normalizePort(process.env.PORT || '6677')
+server.listen(port,function(){
+    console.log('Servidor está funcionando en '+port);
 });
 

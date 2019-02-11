@@ -1,4 +1,7 @@
-var socket =io.connect('https://fastwebservice.herokuapp.com/',{'forceNew':true});
+
+var port =normalizePort(process.env.PORT || '6677')
+
+var socket =io.connect(port,{'forceNew':true});
 
 socket.on('messages',function(data){
     console.log(data);

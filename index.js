@@ -5,9 +5,6 @@ var io =require('socket.io')(server);
 
 app.use(express.static('client'));
 
-app.get('/chat',function(req,res){
-    res.status(200).send('hola mundo desde una ruta');
-});
 
 var messages =[{
     id:1,
@@ -26,8 +23,8 @@ io.on('connection',function(socket){
         io.sockets.emit('messages',messages);
     });
 });
-
-server.listen("https://fastwebservice.herokuapp.com/",function(){
-    console.log('Servidor está funcionando en https://fastwebservice.herokuapp.com/');
+var port =normalizePort(process.env.PORT || '6677')
+server.listen(port,function(){
+    console.log('Servidor está funcionando en '+port);
 });
 
