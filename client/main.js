@@ -1,4 +1,4 @@
-var socket =io.connect('http://localhost:6677',{'forceNew':true});
+var socket =io.connect('https://fastwebservice.herokuapp.com/',{'forceNew':true});
 
 socket.on('messages',function(data){
     console.log(data);

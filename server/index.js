@@ -25,7 +25,7 @@ io.on('connection',function(socket){
     });
 });
 
-server.listen(6677,function(){
-    console.log('Servidor está funcionando en http://localhost:6677');
+server.listen("https://fastwebservice.herokuapp.com/",function(){
+    console.log('Servidor está funcionando en https://fastwebservice.herokuapp.com/');
 });
 
